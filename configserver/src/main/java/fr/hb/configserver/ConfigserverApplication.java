@@ -1,18 +1,17 @@
-package fr.hb.admin;
+package fr.hb.configserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
-import de.codecentric.boot.admin.server.config.EnableAdminServer;
-
-@EnableAdminServer
+@EnableConfigServer
 @EnableDiscoveryClient
 @SpringBootApplication
-public class AdminApplication {
+public class ConfigserverApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AdminApplication.class, args);
+		SpringApplication.run(ConfigserverApplication.class, args);
 	}
 
 }
